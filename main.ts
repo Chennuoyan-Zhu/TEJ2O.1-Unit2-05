@@ -1,8 +1,28 @@
-/* Copyright (c) 2020 MTHS All rights reserved
+/* Copyright (c) 2025 MTHS All rights reserved
  *
- * Created by: XXX
- * Created on: Sep 2020
- * This program ...
+ * Created by: Noyan
+ * Created on: Sep 2025
+ * This program converts degress Celsius to Kelvin.
 */
 
-basic.showString('Hello, World!')
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
+
+// variables
+let celsius: number
+let kelvin:number 
+
+input.onButtonPressed(Button.A, function() {
+  // input
+  celsius =  input.temperature()
+
+  // process
+  kelvin = celsius + 273.15
+  kelvin = Math.round(kelvin)
+
+  // output
+  basic.clearScreen()
+  basic.showString('The temperature is:')
+  basic.showNumber(kelvin)
+  basic.showString('K')
+})
